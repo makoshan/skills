@@ -26,9 +26,6 @@ description: Manus API integration and usage workflows. Use when asked about Man
 3) Save report outputs under `work/reports/` for reuse.
 4) For long tasks, use webhook receiver or run/wait polling.
 
-## Prompt templates
-- AI 眼镜报告模板：`/Users/thursday/sunday/work/manus/ai-glasses-prompt.md`
-  - Time range is embedded: “以运行时为基准，覆盖近48小时”。
 
 ## References
 - Webhooks: see `references/webhooks.md`
