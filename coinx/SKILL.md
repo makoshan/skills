@@ -1,6 +1,7 @@
 ---
 name: coinx
 description: 使用 coinx CLI（ccxt + ta）查询加密货币价格、K线和多指标共振信号，输出机器可读 JSON，适用于新闻信号确认与量化分析。
+homepage: https://github.com/makoshan/coinx
 metadata: {"clawdbot":{"emoji":"📈","requires":{"bins":["python"]}}}
 ---
 
@@ -8,8 +9,17 @@ metadata: {"clawdbot":{"emoji":"📈","requires":{"bins":["python"]}}}
 
 使用 `coinx` CLI 查询价格、K线和技术指标信号（不执行下单）。
 
+项目链接
+- GitHub: https://github.com/makoshan/coinx
+
 安装
 - Python 依赖：`pip install ccxt pandas numpy ta pytest`
+- 从 GitHub 安装 coinx：`pip install git+https://github.com/makoshan/coinx.git`
+
+最简使用
+1. 价格：`python -m coinx price --ex okx --symbol BTC/USDT`
+2. 共振：`python -m coinx ta confluence --ex okx --symbol BTC/USDT --tf-main 1h --tf-htf 4h --lookback 500`
+3. 解析：读取 `score.final_bias` 和 `score_main/score_htf` 作为信号输入。
 
 快速入门
 - 查看帮助：`python -m coinx --help`
