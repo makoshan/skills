@@ -1,7 +1,6 @@
 ---
 name: coinx
 description: 使用 coinx CLI（ccxt + ta）查询加密货币价格、K线和多指标共振信号，输出机器可读 JSON，适用于新闻信号确认与量化分析。
-homepage: https://github.com/makoshan/tg-crypto-listener
 metadata: {"clawdbot":{"emoji":"📈","requires":{"bins":["python"]}}}
 ---
 
@@ -36,8 +35,7 @@ metadata: {"clawdbot":{"emoji":"📈","requires":{"bins":["python"]}}}
 - `4` 计算错误
 - `1` 其他内部错误
 
-在 tg-crypto-listener 中的用途
-- 作为新闻/情绪信号的技术面确认层。
-- 将 `final_bias` 与 `score_main/score_htf` 融合进 AI `action/confidence`。
-- 用 `breakout_high40/breakout_low40` 作为事件触发后的关键位校验。
-
+集成建议
+- 将 `score.final_bias` 作为方向过滤信号。
+- 将 `score_main/score_htf` 作为强度分层输入。
+- 用 `breakout_high40/breakout_low40` 作为关键位确认条件。
